@@ -47,8 +47,8 @@ def path_to_dict(path):
             path = new_path
         d['type'] = "file"
         d['title'] = os.path.splitext(d['name'])[0]
-        # d['file'] = '/' + '/'.join(names[-3:])
-        d['file'] = to_s3_url(file=names[-1], prefix='/'.join(names[-3:-1]))
+        d['file'] = '/' + '/'.join(names[-3:])
+        # d['file'] = to_s3_url(file=names[-1], prefix='/'.join(names[-3:-1]))
         d['howl'] = None
         d['created'] = os.path.getctime(path)
     return d

@@ -172,64 +172,64 @@ Player.prototype = {
         onpause: function () {},
         onstop: function () {}
       });
-    }
-    // Waveform display
-    var width = waveform.clientWidth;
-    var height = (window.innerHeight > 0) ? window.innerHeight * 0.2 : screen.height * 0.2;
-    waveform.style.bottom = (height * 0.1 + 90) + 'px';
-    if (animatedWaveform.checked) {
-      var accuracy = (width < 400) ? 16 : (width < 550) ? 32 : (width < 950) ? 64 : 128;
-      canvas.style.display = 'block';
-      waveform.style.opacity = 0.5;
-      if (wavesurfer) {
-        wavesurfer.destroy();
-      }
-      vudio = new Vudio(sound._sounds[0]._node, canvas, {
-        effect: 'waveform',
-        accuracy: accuracy,
-        width: width,
-        height: height,
-        waveform: {
-          maxHeight: height / 10 * 9,
-          minHeight: 1,
-          spacing: 4,
-          color: ['#ffffff', '#e0e0e0', ' #c9c9c9'],
-          shadowBlur: 1,
-          shadowColor: '#939393',
-          fadeSide: false,
-          prettify: false,
-          horizontalAlign: 'center', // left/center/right
-          verticalAlign: 'bottom' // top/middle/bottom
+      // Waveform display
+      var width = waveform.clientWidth;
+      var height = (window.innerHeight > 0) ? window.innerHeight * 0.2 : screen.height * 0.2;
+      waveform.style.bottom = (height * 0.1 + 90) + 'px';
+      if (animatedWaveform.checked) {
+        var accuracy = (width < 400) ? 16 : (width < 550) ? 32 : (width < 950) ? 64 : 128;
+        canvas.style.display = 'block';
+        waveform.style.opacity = 0.5;
+        if (wavesurfer) {
+          wavesurfer.destroy();
         }
-      });
-      vudio.dance();
-    } else {
-      canvas.style.display = 'none';
-      waveform.style.opacity = 1;
-      if (wavesurfer) {
-        wavesurfer.destroy();
+        vudio = new Vudio(sound._sounds[0]._node, canvas, {
+          effect: 'waveform',
+          accuracy: accuracy,
+          width: width,
+          height: height,
+          waveform: {
+            maxHeight: height / 10 * 9,
+            minHeight: 1,
+            spacing: 4,
+            color: ['#ffffff', '#e0e0e0', ' #c9c9c9'],
+            shadowBlur: 1,
+            shadowColor: '#939393',
+            fadeSide: false,
+            prettify: false,
+            horizontalAlign: 'center', // left/center/right
+            verticalAlign: 'bottom' // top/middle/bottom
+          }
+        });
+        vudio.dance();
+      } else {
+        canvas.style.display = 'none';
+        waveform.style.opacity = 1;
+        if (wavesurfer) {
+          wavesurfer.destroy();
+        }
+        wavesurfer = WaveSurfer.create({
+          container: '#waveform',
+          backend: 'MediaElement',
+          barWidth: 3,
+          cursorColor: '#b556ff',
+          cursorWidth: 1,
+          progressColor: '#bf6dff',
+          waveColor: '#e0e0e0',
+          responsive: true
+        });
+        wavesurfer.load(sound._sounds[0]._node)
+        wavesurfer.on('ready', function () {
+          wavesurfer.play();
+        });
       }
-      wavesurfer = WaveSurfer.create({
-        container: '#waveform',
-        backend: 'MediaElement',
-        barWidth: 3,
-        cursorColor: '#b556ff',
-        cursorWidth: 1,
-        progressColor: '#bf6dff',
-        waveColor: '#e0e0e0',
-        responsive: true
-      });
-      wavesurfer.load(sound._sounds[0]._node)
-      wavesurfer.on('ready', function () {
-        wavesurfer.play();
-      });
+      waveform.style.cursor = 'pointer';
+      var indexTemp = index - 1;
+      while (self.playlist[indexTemp].file != null) {
+        --indexTemp;
+      }
+      document.getElementById('series').innerHTML = self.playlist[indexTemp].title;
     }
-    waveform.style.cursor = 'pointer';
-    var indexTemp = index - 1;
-    while (self.playlist[indexTemp].file != null) {
-      --indexTemp;
-    }
-    document.getElementById('series').innerHTML = self.playlist[indexTemp].title;
 
     // Begin playing the sound.
     sound.play();
@@ -258,48 +258,6 @@ Player.prototype = {
     
     // Update the loop button
     loopBtn.toggleAttribute("is-active", sound.loop());
-  },
-  /**
-   * Load (pre-load) a song in Howl.
-   * @param  {Number} index Index of the song in the playlist (leave empty to play the first or current).
-   */
-  load: function (index) {
-    var self = this;
-    var sound;
-
-    index = typeof index === 'number' ? index : self.index;
-    var data = self.playlist[index];
-    // Load song    
-    if (data.howl) {
-      sound = data.howl;
-    } else {
-      sound = data.howl = new Howl({
-        src: [data.file],
-        // src: ['.' + data.file],
-        html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
-        // preload: true, // Force to HTML5 so that the audio can stream in (best for large files).
-        onplay: function () {
-          // Display the duration.
-          duration.innerHTML = self.formatTime(Math.round(sound.duration()));
-
-          // Start upating the progress of the track.
-          requestAnimationFrame(self.step.bind(self));
-
-          pauseBtn.style.display = 'block';
-        },
-        onload: function () {
-          loading.style.display = 'none';
-        },
-        onend: function () {
-          // Since we should NOT skip to next, if looping
-          if (!data.howl.loop()) {
-            self.skip('next');
-          }
-        },
-        onpause: function () {},
-        onstop: function () {}
-      });
-    }
   },
 
   /**
@@ -330,34 +288,27 @@ Player.prototype = {
   skip: function (direction) {
     var self = this;
 
-    const calcNextIndex = (index) => {
-      if (randomPlay.checked) {
-        return Math.floor(Math.random() * self.playlist.length);
-      } else {
-        if (direction === 'prev') {
-          index = index - 1;
-          if (index < 0) {
-            index = self.playlist.length - 1;
-          }
-        } else {
-          index = index + 1;
-          if (index >= self.playlist.length) {
-            index = 0;
-          }
-        }
-        return index
-      }
-    }
-
     // Get the next track based on the direction of the track.
     var index = 0;
     if (direction === 'prev' && self.playlist[self.index].howl && self.playlist[self.index].howl.seek() <= 3) {
       self.playlist[self.index].howl.seek(0);
     } else {
-      index = self.nextIndex || calcNextIndex(self.index);
+      if (randomPlay.checked) {
+        index = Math.floor(Math.random() * self.playlist.length);
+      } else {
+        if (direction === 'prev') {
+          index = self.index - 1;
+          if (index < 0) {
+            index = self.playlist.length - 1;
+          }
+        } else {
+          index = self.index + 1;
+          if (index >= self.playlist.length) {
+            index = 0;
+          }
+        }
+      }
       self.skipTo(index);
-      self.nextIndex = calcNextIndex(self.index)
-      self.load(self.nextIndex);
     }
   },
 
