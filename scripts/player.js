@@ -1,5 +1,5 @@
 // Cache references to DOM elements.
-var elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'settingBtn', 'playlistBtn', 'volumeBtn', 'progress', 'waveform', 'canvas', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
+var elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'settingBtn', 'playlistBtn', 'loopBtn', 'volumeBtn', 'progress', 'waveform', 'canvas', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
 elms.forEach(function (elm) {
   window[elm] = document.getElementById(elm);
 });
@@ -164,7 +164,10 @@ Player.prototype = {
           loading.style.display = 'none';
         },
         onend: function () {
-          self.skip('next');
+          // Since we should NOT skip to next, if looping
+          if (!data.howl.loop()) {
+            self.skip('next');
+          }
         },
         onpause: function () {},
         onstop: function () {}
@@ -252,6 +255,9 @@ Player.prototype = {
       playBtn.style.display = 'none';
       pauseBtn.style.display = 'none';
     }
+    
+    // Update the loop button
+    loopBtn.toggleAttribute("is-active", sound.loop());
   },
 
   /**
@@ -340,6 +346,24 @@ Player.prototype = {
     var barWidth = (val * 90) / 100;
     barFull.style.width = (barWidth * 100) + '%';
     sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 25) + 'px';
+  },
+
+  /**
+   * Toggle whether to loop.
+   */
+  toggleLoop: function () {
+    var self = this;
+
+    // Get the Howl we want to manipulate.
+    var sound = self.playlist[self.index].howl;
+
+    if (!sound || !sound.loop) return; // short-circuit if howl not loaded
+
+    // Update the loop value.
+    sound.loop(!sound.loop());
+
+    // Update the display on the slider.
+    loopBtn.toggleAttribute("is-active");
   },
 
   /**
@@ -562,6 +586,9 @@ playlistBtn.addEventListener('click', function () {
 });
 playlist.addEventListener('click', function () {
   player.togglePlaylist();
+});
+loopBtn.addEventListener('click', function () {
+  player.toggleLoop();
 });
 volumeBtn.addEventListener('click', function () {
   player.toggleVolume();
