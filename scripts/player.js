@@ -136,9 +136,86 @@ Player.prototype = {
     parser.set('index', index);
     history.pushState(null, '', '?' + parser.toString());
 
+    const generateWaveform = (sound) => {
+      // Waveform display
+      var width = waveform.clientWidth;
+      var height = (window.innerHeight > 0) ? window.innerHeight * 0.2 : screen.height * 0.2;
+      waveform.style.bottom = (height * 0.1 + 90) + 'px';
+      if (animatedWaveform.checked) {
+        var accuracy = (width < 400) ? 16 : (width < 550) ? 32 : (width < 950) ? 64 : 128;
+        canvas.style.display = 'block';
+        waveform.style.opacity = 0.5;
+        if (wavesurfer) {
+          wavesurfer.destroy();
+        }
+        vudio = new Vudio(sound._sounds[0]._node, canvas, {
+          effect: 'waveform',
+          accuracy: accuracy,
+          width: width,
+          height: height,
+          waveform: {
+            maxHeight: height / 10 * 9,
+            minHeight: 1,
+            spacing: 4,
+            color: ['#ffffff', '#e0e0e0', ' #c9c9c9'],
+            shadowBlur: 1,
+            shadowColor: '#939393',
+            fadeSide: false,
+            prettify: false,
+            horizontalAlign: 'center', // left/center/right
+            verticalAlign: 'bottom' // top/middle/bottom
+          }
+        });
+        vudio.dance();
+      } else {
+        canvas.style.display = 'none';
+        waveform.style.opacity = 1;
+        if (wavesurfer) {
+          wavesurfer.destroy();
+        }
+        wavesurfer = WaveSurfer.create({
+          container: '#waveform',
+          backend: 'MediaElement',
+          barWidth: 3,
+          cursorColor: '#b556ff',
+          cursorWidth: 1,
+          progressColor: '#bf6dff',
+          waveColor: '#e0e0e0',
+          responsive: true
+        });
+        wavesurfer.load(sound._sounds[0]._node)
+        wavesurfer.on('ready', function () {
+          wavesurfer.play();
+        });
+      }
+      waveform.style.cursor = 'pointer';
+      var indexTemp = index - 1;
+      while (self.playlist[indexTemp].file != null) {
+        --indexTemp;
+      }
+      document.getElementById('series').innerHTML = self.playlist[indexTemp].title;
+    }
+
+    updateIndicators = (sound) => {
+      // Show the pause button.
+      if (sound.state() === 'loaded') {
+        loading.style.display = 'none';
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'block';
+      } else {
+        loading.style.display = 'block';
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'none';
+      }
+      
+      // Update the loop button
+      loopBtn.toggleAttribute("is-active", sound.loop());
+    }
+
     // Load song    
     if (data.howl) {
       sound = data.howl;
+      generateWaveform(sound);
     } else {
       sound = data.howl = new Howl({
         src: [data.file],
@@ -161,7 +238,8 @@ Player.prototype = {
           pauseBtn.style.display = 'block';
         },
         onload: function () {
-          loading.style.display = 'none';
+          generateWaveform(sound);
+          updateIndicators(sound);
         },
         onend: function () {
           // Since we should NOT skip to next, if looping
@@ -173,63 +251,6 @@ Player.prototype = {
         onstop: function () {}
       });
     }
-    // Waveform display
-    var width = waveform.clientWidth;
-    var height = (window.innerHeight > 0) ? window.innerHeight * 0.2 : screen.height * 0.2;
-    waveform.style.bottom = (height * 0.1 + 90) + 'px';
-    if (animatedWaveform.checked) {
-      var accuracy = (width < 400) ? 16 : (width < 550) ? 32 : (width < 950) ? 64 : 128;
-      canvas.style.display = 'block';
-      waveform.style.opacity = 0.5;
-      if (wavesurfer) {
-        wavesurfer.destroy();
-      }
-      vudio = new Vudio(sound._sounds[0]._node, canvas, {
-        effect: 'waveform',
-        accuracy: accuracy,
-        width: width,
-        height: height,
-        waveform: {
-          maxHeight: height / 10 * 9,
-          minHeight: 1,
-          spacing: 4,
-          color: ['#ffffff', '#e0e0e0', ' #c9c9c9'],
-          shadowBlur: 1,
-          shadowColor: '#939393',
-          fadeSide: false,
-          prettify: false,
-          horizontalAlign: 'center', // left/center/right
-          verticalAlign: 'bottom' // top/middle/bottom
-        }
-      });
-      vudio.dance();
-    } else {
-      canvas.style.display = 'none';
-      waveform.style.opacity = 1;
-      if (wavesurfer) {
-        wavesurfer.destroy();
-      }
-      wavesurfer = WaveSurfer.create({
-        container: '#waveform',
-        backend: 'MediaElement',
-        barWidth: 3,
-        cursorColor: '#b556ff',
-        cursorWidth: 1,
-        progressColor: '#bf6dff',
-        waveColor: '#e0e0e0',
-        responsive: true
-      });
-      wavesurfer.load(sound._sounds[0]._node)
-      wavesurfer.on('ready', function () {
-        wavesurfer.play();
-      });
-    }
-    waveform.style.cursor = 'pointer';
-    var indexTemp = index - 1;
-    while (self.playlist[indexTemp].file != null) {
-      --indexTemp;
-    }
-    document.getElementById('series').innerHTML = self.playlist[indexTemp].title;
 
     // Begin playing the sound.
     sound.play();
@@ -246,18 +267,7 @@ Player.prototype = {
       videoPlayer.play();
     }
 
-    // Show the pause button.
-    if (sound.state() === 'loaded') {
-      playBtn.style.display = 'none';
-      pauseBtn.style.display = 'block';
-    } else {
-      loading.style.display = 'block';
-      playBtn.style.display = 'none';
-      pauseBtn.style.display = 'none';
-    }
-    
-    // Update the loop button
-    loopBtn.toggleAttribute("is-active", sound.loop());
+    updateIndicators(sound);
   },
   /**
    * Load (pre-load) a song in Howl.
@@ -286,9 +296,6 @@ Player.prototype = {
           requestAnimationFrame(self.step.bind(self));
 
           pauseBtn.style.display = 'block';
-        },
-        onload: function () {
-          loading.style.display = 'none';
         },
         onend: function () {
           // Since we should NOT skip to next, if looping
