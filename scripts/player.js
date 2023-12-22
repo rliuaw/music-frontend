@@ -277,6 +277,7 @@ Player.prototype = {
         src: [data.file],
         // src: ['.' + data.file],
         html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
+        preload: true,
         onplay: function () {
           // Display the duration.
           duration.innerHTML = self.formatTime(Math.round(sound.duration()));
