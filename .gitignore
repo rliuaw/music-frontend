@@ -3,3 +3,4 @@ images/temp/
 .vscode
 audio/*
 database/*
+__pycache__/

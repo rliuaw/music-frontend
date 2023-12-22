@@ -5,43 +5,43 @@
     "title": "daw1glitch"
   },
   {
-    "created": 1703203215.2617972,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1glitch/392327064.wav",
+    "created": 1703284373.8105097,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1glitch/206519416.mp3",
     "howl": null,
-    "name": "392327064.wav",
+    "name": "206519416.mp3",
+    "title": "206519416",
+    "type": "file"
+  },
+  {
+    "created": 1703284370.8166027,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1glitch/392327064.mp3",
+    "howl": null,
+    "name": "392327064.mp3",
     "title": "392327064",
     "type": "file"
   },
   {
-    "created": 1703203214.4390907,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1glitch/372913208.wav",
+    "created": 1703284371.2227685,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1glitch/372913208.mp3",
     "howl": null,
-    "name": "372913208.wav",
+    "name": "372913208.mp3",
     "title": "372913208",
     "type": "file"
   },
   {
-    "created": 1703203212.7024863,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1glitch/206263000.wav",
+    "created": 1703284372.0312128,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1glitch/206263000.mp3",
     "howl": null,
-    "name": "206263000.wav",
+    "name": "206263000.mp3",
     "title": "206263000",
     "type": "file"
   },
   {
-    "created": 1703203214.1451304,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1glitch/231969976.wav",
+    "created": 1703284373.3313277,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1glitch/231969976.mp3",
     "howl": null,
-    "name": "231969976.wav",
+    "name": "231969976.mp3",
     "title": "231969976",
-    "type": "file"
-  },
-  {
-    "created": 1703203213.0906801,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1glitch/206519416.wav",
-    "howl": null,
-    "name": "206519416.wav",
-    "title": "206519416",
     "type": "file"
   },
   {
@@ -50,67 +50,67 @@
     "title": "daw1vocal"
   },
   {
-    "created": 1703203244.801016,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/as+long+as+i+see+you+one+last+time+75.wav",
+    "created": 1703284376.7745485,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/COLORS+WHISPER+150+DRY.mp3",
     "howl": null,
-    "name": "as long as i see you one last time 75.wav",
-    "title": "as long as i see you one last time 75",
-    "type": "file"
-  },
-  {
-    "created": 1703203246.2188592,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/i+know+it+must+be+true+150.wav",
-    "howl": null,
-    "name": "i know it must be true 150.wav",
-    "title": "i know it must be true 150",
-    "type": "file"
-  },
-  {
-    "created": 1703203243.857386,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/and+im+feeling+a+little+crazy+120.wav",
-    "howl": null,
-    "name": "and im feeling a little crazy 120.wav",
-    "title": "and im feeling a little crazy 120",
-    "type": "file"
-  },
-  {
-    "created": 1703203246.0756693,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/her+life+not+lived+75.wav",
-    "howl": null,
-    "name": "her life not lived 75.wav",
-    "title": "her life not lived 75",
-    "type": "file"
-  },
-  {
-    "created": 1703203242.5627992,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/COLORS+WHISPER+150+DRY.wav",
-    "howl": null,
-    "name": "COLORS WHISPER 150 DRY.wav",
+    "name": "COLORS WHISPER 150 DRY.mp3",
     "title": "COLORS WHISPER 150 DRY",
     "type": "file"
   },
   {
-    "created": 1703203245.2132733,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/her+life+not+lived+75+FULL.wav",
+    "created": 1703284377.2174413,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/her+life+not+lived+75+FULL.mp3",
     "howl": null,
-    "name": "her life not lived 75 FULL.wav",
+    "name": "her life not lived 75 FULL.mp3",
     "title": "her life not lived 75 FULL",
     "type": "file"
   },
   {
-    "created": 1703203242.89363,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/COLORS+WHISPER+150.wav",
+    "created": 1703284378.1343896,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/as+long+as+i+see+you+one+last+time+75+FULL.mp3",
     "howl": null,
-    "name": "COLORS WHISPER 150.wav",
+    "name": "as long as i see you one last time 75 FULL.mp3",
+    "title": "as long as i see you one last time 75 FULL",
+    "type": "file"
+  },
+  {
+    "created": 1703284377.5502045,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/COLORS+WHISPER+150.mp3",
+    "howl": null,
+    "name": "COLORS WHISPER 150.mp3",
     "title": "COLORS WHISPER 150",
     "type": "file"
   },
   {
-    "created": 1703203244.4056652,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/as+long+as+i+see+you+one+last+time+75+FULL.wav",
+    "created": 1703284374.3734443,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/as+long+as+i+see+you+one+last+time+75.mp3",
     "howl": null,
-    "name": "as long as i see you one last time 75 FULL.wav",
-    "title": "as long as i see you one last time 75 FULL",
+    "name": "as long as i see you one last time 75.mp3",
+    "title": "as long as i see you one last time 75",
+    "type": "file"
+  },
+  {
+    "created": 1703284374.59139,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/i+know+it+must+be+true+150.mp3",
+    "howl": null,
+    "name": "i know it must be true 150.mp3",
+    "title": "i know it must be true 150",
+    "type": "file"
+  },
+  {
+    "created": 1703284376.4694068,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/her+life+not+lived+75.mp3",
+    "howl": null,
+    "name": "her life not lived 75.mp3",
+    "title": "her life not lived 75",
+    "type": "file"
+  },
+  {
+    "created": 1703284375.436026,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1vocal/and+im+feeling+a+little+crazy+120.mp3",
+    "howl": null,
+    "name": "and im feeling a little crazy 120.mp3",
+    "title": "and im feeling a little crazy 120",
     "type": "file"
   },
   {
@@ -119,251 +119,251 @@
     "title": "daw1piano"
   },
   {
-    "created": 1703203228.45619,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Coalescent+90.wav",
+    "created": 1703284385.5895789,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Effervescent+Wasteland+75.mp3",
     "howl": null,
-    "name": "Coalescent 90.wav",
-    "title": "Coalescent 90",
-    "type": "file"
-  },
-  {
-    "created": 1703203238.1545289,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/song+of+storms+75.wav",
-    "howl": null,
-    "name": "song of storms 75.wav",
-    "title": "song of storms 75",
-    "type": "file"
-  },
-  {
-    "created": 1703203233.727595,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/cold+as+ice+110+(future+bass).wav",
-    "howl": null,
-    "name": "cold as ice 110 (future bass).wav",
-    "title": "cold as ice 110 (future bass)",
-    "type": "file"
-  },
-  {
-    "created": 1703203236.6937497,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/one+AM+90.wav",
-    "howl": null,
-    "name": "one AM 90.wav",
-    "title": "one AM 90",
-    "type": "file"
-  },
-  {
-    "created": 1703203227.5288835,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/388335+-+Forest+of+Time.wav",
-    "howl": null,
-    "name": "388335 - Forest of Time.wav",
-    "title": "388335 - Forest of Time",
-    "type": "file"
-  },
-  {
-    "created": 1703203241.119051,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/your+facade%2C+day+in+and+day+out+75.wav",
-    "howl": null,
-    "name": "your facade, day in and day out 75.wav",
-    "title": "your facade, day in and day out 75",
-    "type": "file"
-  },
-  {
-    "created": 1703203237.6284337,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/pvz+rng+2+150.wav",
-    "howl": null,
-    "name": "pvz rng 2 150.wav",
-    "title": "pvz rng 2 150",
-    "type": "file"
-  },
-  {
-    "created": 1703203236.1545544,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/loopy+west+132.wav",
-    "howl": null,
-    "name": "loopy west 132.wav",
-    "title": "loopy west 132",
-    "type": "file"
-  },
-  {
-    "created": 1703203237.079737,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/pixel+cosmos+v2+150.wav",
-    "howl": null,
-    "name": "pixel cosmos v2 150.wav",
-    "title": "pixel cosmos v2 150",
-    "type": "file"
-  },
-  {
-    "created": 1703203234.7046762,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/gargoyle+75.wav",
-    "howl": null,
-    "name": "gargoyle 75.wav",
-    "title": "gargoyle 75",
-    "type": "file"
-  },
-  {
-    "created": 1703203231.6008434,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Slowly+the+Wind+Blows+100.wav",
-    "howl": null,
-    "name": "Slowly the Wind Blows 100.wav",
-    "title": "Slowly the Wind Blows 100",
-    "type": "file"
-  },
-  {
-    "created": 1703203230.7288666,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/SKY+RACERS+150.wav",
-    "howl": null,
-    "name": "SKY RACERS 150.wav",
-    "title": "SKY RACERS 150",
-    "type": "file"
-  },
-  {
-    "created": 1703203229.0095546,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Effervescent+Wasteland+75.wav",
-    "howl": null,
-    "name": "Effervescent Wasteland 75.wav",
+    "name": "Effervescent Wasteland 75.mp3",
     "title": "Effervescent Wasteland 75",
     "type": "file"
   },
   {
-    "created": 1703203232.7213516,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/and+it+builds+up+up+up+75.wav",
+    "created": 1703284386.0022233,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/and+it+builds+up+up+up+75.mp3",
     "howl": null,
-    "name": "and it builds up up up 75.wav",
+    "name": "and it builds up up up 75.mp3",
     "title": "and it builds up up up 75",
     "type": "file"
   },
   {
-    "created": 1703203235.4284463,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/halloween+150.wav",
+    "created": 1703284387.5085516,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Lattices+and+Lotuses+150.mp3",
     "howl": null,
-    "name": "halloween 150.wav",
-    "title": "halloween 150",
-    "type": "file"
-  },
-  {
-    "created": 1703203236.108321,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/kirby+pixel+120.wav",
-    "howl": null,
-    "name": "kirby pixel 120.wav",
-    "title": "kirby pixel 120",
-    "type": "file"
-  },
-  {
-    "created": 1703203230.1480446,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Lattices+and+Lotuses+150.wav",
-    "howl": null,
-    "name": "Lattices and Lotuses 150.wav",
+    "name": "Lattices and Lotuses 150.mp3",
     "title": "Lattices and Lotuses 150",
     "type": "file"
   },
   {
-    "created": 1703203238.4896173,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/super+pixel+galaxy+150.wav",
+    "created": 1703284387.0342393,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/kirby+pixel+120.mp3",
     "howl": null,
-    "name": "super pixel galaxy 150.wav",
-    "title": "super pixel galaxy 150",
+    "name": "kirby pixel 120.mp3",
+    "title": "kirby pixel 120",
     "type": "file"
   },
   {
-    "created": 1703203229.6521347,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Fading+Night+84.wav",
+    "created": 1703284386.6849122,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/halloween+150.mp3",
     "howl": null,
-    "name": "Fading Night 84.wav",
-    "title": "Fading Night 84",
+    "name": "halloween 150.mp3",
+    "title": "halloween 150",
     "type": "file"
   },
   {
-    "created": 1703203230.5678918,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Monadnock+FM7+CM7+75.wav",
+    "created": 1703284389.4283948,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/ive+felt+this+before+norm.mp3",
     "howl": null,
-    "name": "Monadnock FM7 CM7 75.wav",
-    "title": "Monadnock FM7 CM7 75",
-    "type": "file"
-  },
-  {
-    "created": 1703203232.346854,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/You+Go+Ahead+75.wav",
-    "howl": null,
-    "name": "You Go Ahead 75.wav",
-    "title": "You Go Ahead 75",
-    "type": "file"
-  },
-  {
-    "created": 1703203235.8463354,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/ive+felt+this+before+norm.wav",
-    "howl": null,
-    "name": "ive felt this before norm.wav",
+    "name": "ive felt this before norm.mp3",
     "title": "ive felt this before norm",
     "type": "file"
   },
   {
-    "created": 1703203233.2086005,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/cloak+of+eons+108+(future+bass).wav",
+    "created": 1703284388.9469411,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/You+Go+Ahead+75.mp3",
     "howl": null,
-    "name": "cloak of eons 108 (future bass).wav",
+    "name": "You Go Ahead 75.mp3",
+    "title": "You Go Ahead 75",
+    "type": "file"
+  },
+  {
+    "created": 1703284388.174701,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Fading+Night+84.mp3",
+    "howl": null,
+    "name": "Fading Night 84.mp3",
+    "title": "Fading Night 84",
+    "type": "file"
+  },
+  {
+    "created": 1703284388.5555053,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Monadnock+FM7+CM7+75.mp3",
+    "howl": null,
+    "name": "Monadnock FM7 CM7 75.mp3",
+    "title": "Monadnock FM7 CM7 75",
+    "type": "file"
+  },
+  {
+    "created": 1703284387.8302982,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/super+pixel+galaxy+150.mp3",
+    "howl": null,
+    "name": "super pixel galaxy 150.mp3",
+    "title": "super pixel galaxy 150",
+    "type": "file"
+  },
+  {
+    "created": 1703284389.7331834,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/cloak+of+eons+108+(future+bass).mp3",
+    "howl": null,
+    "name": "cloak of eons 108 (future bass).mp3",
     "title": "cloak of eons 108 (future bass)",
     "type": "file"
   },
   {
-    "created": 1703203231.989884,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Something+Real+75.wav",
+    "created": 1703284390.161579,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Something+Real+75.mp3",
     "howl": null,
-    "name": "Something Real 75.wav",
+    "name": "Something Real 75.mp3",
     "title": "Something Real 75",
     "type": "file"
   },
   {
-    "created": 1703203227.2286036,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/368858+-+yes+beat.wav",
+    "created": 1703284391.0580246,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/368858+-+yes+beat.mp3",
     "howl": null,
-    "name": "368858 - yes beat.wav",
+    "name": "368858 - yes beat.mp3",
     "title": "368858 - yes beat",
     "type": "file"
   },
   {
-    "created": 1703203229.3475647,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Endeavors+Forgotten+180.wav",
+    "created": 1703284391.4216256,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Endeavors+Forgotten+180.mp3",
     "howl": null,
-    "name": "Endeavors Forgotten 180.wav",
+    "name": "Endeavors Forgotten 180.mp3",
     "title": "Endeavors Forgotten 180",
     "type": "file"
   },
   {
-    "created": 1703203234.256097,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/field+of+futures+75.wav",
+    "created": 1703284391.9630036,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/field+of+futures+75.mp3",
     "howl": null,
-    "name": "field of futures 75.wav",
+    "name": "field of futures 75.mp3",
     "title": "field of futures 75",
     "type": "file"
   },
   {
-    "created": 1703203227.9320154,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/733913+-+I+would've+tried.wav",
+    "created": 1703284393.630123,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/733913+-+I+would've+tried.mp3",
     "howl": null,
-    "name": "733913 - I would've tried.wav",
+    "name": "733913 - I would've tried.mp3",
     "title": "733913 - I would've tried",
     "type": "file"
   },
   {
-    "created": 1703203232.9651046,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/castle+of+resistance+100.wav",
+    "created": 1703284395.6499834,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/together+150.mp3",
     "howl": null,
-    "name": "castle of resistance 100.wav",
-    "title": "castle of resistance 100",
+    "name": "together 150.mp3",
+    "title": "together 150",
     "type": "file"
   },
   {
-    "created": 1703203239.5124853,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/the+cause+of+all+of+my+concerns+75.wav",
+    "created": 1703284394.8958604,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/the+cause+of+all+of+my+concerns+75.mp3",
     "howl": null,
-    "name": "the cause of all of my concerns 75.wav",
+    "name": "the cause of all of my concerns 75.mp3",
     "title": "the cause of all of my concerns 75",
     "type": "file"
   },
   {
-    "created": 1703203240.3981137,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/together+150.wav",
+    "created": 1703284393.950292,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/castle+of+resistance+100.mp3",
     "howl": null,
-    "name": "together 150.wav",
-    "title": "together 150",
+    "name": "castle of resistance 100.mp3",
+    "title": "castle of resistance 100",
+    "type": "file"
+  },
+  {
+    "created": 1703284379.7931745,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/cold+as+ice+110+(future+bass).mp3",
+    "howl": null,
+    "name": "cold as ice 110 (future bass).mp3",
+    "title": "cold as ice 110 (future bass)",
+    "type": "file"
+  },
+  {
+    "created": 1703284379.2235882,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/song+of+storms+75.mp3",
+    "howl": null,
+    "name": "song of storms 75.mp3",
+    "title": "song of storms 75",
+    "type": "file"
+  },
+  {
+    "created": 1703284378.6336,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Coalescent+90.mp3",
+    "howl": null,
+    "name": "Coalescent 90.mp3",
+    "title": "Coalescent 90",
+    "type": "file"
+  },
+  {
+    "created": 1703284380.3395073,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/one+AM+90.mp3",
+    "howl": null,
+    "name": "one AM 90.mp3",
+    "title": "one AM 90",
+    "type": "file"
+  },
+  {
+    "created": 1703284383.031025,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/pvz+rng+2+150.mp3",
+    "howl": null,
+    "name": "pvz rng 2 150.mp3",
+    "title": "pvz rng 2 150",
+    "type": "file"
+  },
+  {
+    "created": 1703284382.4036064,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/your+facade%2C+day+in+and+day+out+75.mp3",
+    "howl": null,
+    "name": "your facade, day in and day out 75.mp3",
+    "title": "your facade, day in and day out 75",
+    "type": "file"
+  },
+  {
+    "created": 1703284381.7241967,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/388335+-+Forest+of+Time.mp3",
+    "howl": null,
+    "name": "388335 - Forest of Time.mp3",
+    "title": "388335 - Forest of Time",
+    "type": "file"
+  },
+  {
+    "created": 1703284384.0889099,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/gargoyle+75.mp3",
+    "howl": null,
+    "name": "gargoyle 75.mp3",
+    "title": "gargoyle 75",
+    "type": "file"
+  },
+  {
+    "created": 1703284383.5742521,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/pixel+cosmos+v2+150.mp3",
+    "howl": null,
+    "name": "pixel cosmos v2 150.mp3",
+    "title": "pixel cosmos v2 150",
+    "type": "file"
+  },
+  {
+    "created": 1703284383.1536918,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/loopy+west+132.mp3",
+    "howl": null,
+    "name": "loopy west 132.mp3",
+    "title": "loopy west 132",
+    "type": "file"
+  },
+  {
+    "created": 1703284385.1049044,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/SKY+RACERS+150.mp3",
+    "howl": null,
+    "name": "SKY RACERS 150.mp3",
+    "title": "SKY RACERS 150",
+    "type": "file"
+  },
+  {
+    "created": 1703284384.8783185,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1piano/Slowly+the+Wind+Blows+100.mp3",
+    "howl": null,
+    "name": "Slowly the Wind Blows 100.mp3",
+    "title": "Slowly the Wind Blows 100",
     "type": "file"
   },
   {
@@ -372,43 +372,43 @@
     "title": "daw1snippet"
   },
   {
-    "created": 1703203242.2568567,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1snippet/suspicion+100.wav",
+    "created": 1703284422.401194,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1snippet/discovery+150.mp3",
     "howl": null,
-    "name": "suspicion 100.wav",
-    "title": "suspicion 100",
-    "type": "file"
-  },
-  {
-    "created": 1703203241.788817,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1snippet/dance+for+another+150.wav",
-    "howl": null,
-    "name": "dance for another 150.wav",
-    "title": "dance for another 150",
-    "type": "file"
-  },
-  {
-    "created": 1703203242.224262,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1snippet/discovery+150.wav",
-    "howl": null,
-    "name": "discovery 150.wav",
+    "name": "discovery 150.mp3",
     "title": "discovery 150",
     "type": "file"
   },
   {
-    "created": 1703203241.5926795,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1snippet/clouds+and+a+breeze+120.wav",
+    "created": 1703284478.4402745,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1snippet/clouds+and+a+breeze+120.mp3",
     "howl": null,
-    "name": "clouds and a breeze 120.wav",
+    "name": "clouds and a breeze 120.mp3",
     "title": "clouds and a breeze 120",
     "type": "file"
   },
   {
-    "created": 1703203241.2540503,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1snippet/Hyperbolic+Heart+75.wav",
+    "created": 1703284478.6384668,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1snippet/Hyperbolic+Heart+75.mp3",
     "howl": null,
-    "name": "Hyperbolic Heart 75.wav",
+    "name": "Hyperbolic Heart 75.mp3",
     "title": "Hyperbolic Heart 75",
+    "type": "file"
+  },
+  {
+    "created": 1703284478.0328825,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1snippet/dance+for+another+150.mp3",
+    "howl": null,
+    "name": "dance for another 150.mp3",
+    "title": "dance for another 150",
+    "type": "file"
+  },
+  {
+    "created": 1703284477.7370517,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1snippet/suspicion+100.mp3",
+    "howl": null,
+    "name": "suspicion 100.mp3",
+    "title": "suspicion 100",
     "type": "file"
   },
   {
@@ -417,211 +417,211 @@
     "title": "daw1loops"
   },
   {
-    "created": 1703203224.633277,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/meh+130+(jazz+fusion).wav",
+    "created": 1703284485.5772543,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/salient.mp3",
     "howl": null,
-    "name": "meh 130 (jazz fusion).wav",
-    "title": "meh 130 (jazz fusion)",
-    "type": "file"
-  },
-  {
-    "created": 1703203222.2634807,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+green+phoo+village+100.wav",
-    "howl": null,
-    "name": "gaming - green phoo village 100.wav",
-    "title": "gaming - green phoo village 100",
-    "type": "file"
-  },
-  {
-    "created": 1703203216.759506,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/Beached+Whale+150.wav",
-    "howl": null,
-    "name": "Beached Whale 150.wav",
-    "title": "Beached Whale 150",
-    "type": "file"
-  },
-  {
-    "created": 1703203222.5976005,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+green+troll+144.wav",
-    "howl": null,
-    "name": "gaming - green troll 144.wav",
-    "title": "gaming - green troll 144",
-    "type": "file"
-  },
-  {
-    "created": 1703203221.9886878,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+blue+otherworld+120.wav",
-    "howl": null,
-    "name": "gaming - blue otherworld 120.wav",
-    "title": "gaming - blue otherworld 120",
-    "type": "file"
-  },
-  {
-    "created": 1703203217.7134144,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/Frenzy+and+Foil+155.wav",
-    "howl": null,
-    "name": "Frenzy and Foil 155.wav",
-    "title": "Frenzy and Foil 155",
-    "type": "file"
-  },
-  {
-    "created": 1703203218.5713592,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/IJKLM+100.wav",
-    "howl": null,
-    "name": "IJKLM 100.wav",
-    "title": "IJKLM 100",
-    "type": "file"
-  },
-  {
-    "created": 1703203225.9442756,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/symphony+orchestra+alpha+200.wav",
-    "howl": null,
-    "name": "symphony orchestra alpha 200.wav",
-    "title": "symphony orchestra alpha 200",
-    "type": "file"
-  },
-  {
-    "created": 1703203224.9404993,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/notmalie+84.wav",
-    "howl": null,
-    "name": "notmalie 84.wav",
-    "title": "notmalie 84",
-    "type": "file"
-  },
-  {
-    "created": 1703203224.152616,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/jam+session+2020_10_02.wav",
-    "howl": null,
-    "name": "jam session 2020_10_02.wav",
-    "title": "jam session 2020_10_02",
-    "type": "file"
-  },
-  {
-    "created": 1703203219.205106,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/LFO+bass+(deadmau5)+144.wav",
-    "howl": null,
-    "name": "LFO bass (deadmau5) 144.wav",
-    "title": "LFO bass (deadmau5) 144",
-    "type": "file"
-  },
-  {
-    "created": 1703203225.14103,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/real+fast+drum+140.wav",
-    "howl": null,
-    "name": "real fast drum 140.wav",
-    "title": "real fast drum 140",
-    "type": "file"
-  },
-  {
-    "created": 1703203225.44232,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/speedster+150.wav",
-    "howl": null,
-    "name": "speedster 150.wav",
-    "title": "speedster 150",
-    "type": "file"
-  },
-  {
-    "created": 1703203216.8856711,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/Chromatone+Kit.wav",
-    "howl": null,
-    "name": "Chromatone Kit.wav",
-    "title": "Chromatone Kit",
-    "type": "file"
-  },
-  {
-    "created": 1703203220.9328356,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+blue+boss+theme+176.wav",
-    "howl": null,
-    "name": "gaming - blue boss theme 176.wav",
-    "title": "gaming - blue boss theme 176",
-    "type": "file"
-  },
-  {
-    "created": 1703203225.3585238,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/salient.wav",
-    "howl": null,
-    "name": "salient.wav",
+    "name": "salient.mp3",
     "title": "salient",
     "type": "file"
   },
   {
-    "created": 1703203225.0497887,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/piano+uppy+150.wav",
+    "created": 1703284485.3070986,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+blue+boss+theme+176.mp3",
     "howl": null,
-    "name": "piano uppy 150.wav",
-    "title": "piano uppy 150",
+    "name": "gaming - blue boss theme 176.mp3",
+    "title": "gaming - blue boss theme 176",
     "type": "file"
   },
   {
-    "created": 1703203220.2396212,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/first+solo+109.wav",
+    "created": 1703284486.5408287,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/first+solo+109.mp3",
     "howl": null,
-    "name": "first solo 109.wav",
+    "name": "first solo 109.mp3",
     "title": "first solo 109",
     "type": "file"
   },
   {
-    "created": 1703203217.4566498,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/F+%2B+L+-+point+point+88.wav",
+    "created": 1703284485.7465632,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/piano+uppy+150.mp3",
     "howl": null,
-    "name": "F + L - point point 88.wav",
+    "name": "piano uppy 150.mp3",
+    "title": "piano uppy 150",
+    "type": "file"
+  },
+  {
+    "created": 1703284487.0497851,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/F+%2B+L+-+point+point+88.mp3",
+    "howl": null,
+    "name": "F + L - point point 88.mp3",
     "title": "F + L - point point 88",
     "type": "file"
   },
   {
-    "created": 1703203217.5697138,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/FTT+210.wav",
+    "created": 1703284487.239152,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/FTT+210.mp3",
     "howl": null,
-    "name": "FTT 210.wav",
+    "name": "FTT 210.mp3",
     "title": "FTT 210",
     "type": "file"
   },
   {
-    "created": 1703203227.0262208,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/white+house+prime+120.wav",
+    "created": 1703284488.1269703,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/white+house+prime+120.mp3",
     "howl": null,
-    "name": "white house prime 120.wav",
+    "name": "white house prime 120.mp3",
     "title": "white house prime 120",
     "type": "file"
   },
   {
-    "created": 1703203223.024303,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+pink+area+unlocked+135.wav",
+    "created": 1703284488.7952611,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/kirby+dreamland+150.mp3",
     "howl": null,
-    "name": "gaming - pink area unlocked 135.wav",
-    "title": "gaming - pink area unlocked 135",
-    "type": "file"
-  },
-  {
-    "created": 1703203224.3017929,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/kirby+dreamland+150.wav",
-    "howl": null,
-    "name": "kirby dreamland 150.wav",
+    "name": "kirby dreamland 150.mp3",
     "title": "kirby dreamland 150",
     "type": "file"
   },
   {
-    "created": 1703203223.8701766,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+yellow+battle+final+notloop.wav",
+    "created": 1703284488.6037838,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+pink+area+unlocked+135.mp3",
     "howl": null,
-    "name": "gaming - yellow battle final notloop.wav",
-    "title": "gaming - yellow battle final notloop",
+    "name": "gaming - pink area unlocked 135.mp3",
+    "title": "gaming - pink area unlocked 135",
     "type": "file"
   },
   {
-    "created": 1703203221.5321913,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+blue+otherworld+115.wav",
+    "created": 1703284490.1045532,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+blue+otherworld+115.mp3",
     "howl": null,
-    "name": "gaming - blue otherworld 115.wav",
+    "name": "gaming - blue otherworld 115.mp3",
     "title": "gaming - blue otherworld 115",
     "type": "file"
   },
   {
-    "created": 1703203218.9350743,
-    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/LESS+I+KNOW+THE+BETTER+120.wav",
+    "created": 1703284489.649171,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+yellow+battle+final+notloop.mp3",
     "howl": null,
-    "name": "LESS I KNOW THE BETTER 120.wav",
+    "name": "gaming - yellow battle final notloop.mp3",
+    "title": "gaming - yellow battle final notloop",
+    "type": "file"
+  },
+  {
+    "created": 1703284490.4765768,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/LESS+I+KNOW+THE+BETTER+120.mp3",
+    "howl": null,
+    "name": "LESS I KNOW THE BETTER 120.mp3",
     "title": "LESS I KNOW THE BETTER 120",
+    "type": "file"
+  },
+  {
+    "created": 1703284479.0406637,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/meh+130+(jazz+fusion).mp3",
+    "howl": null,
+    "name": "meh 130 (jazz fusion).mp3",
+    "title": "meh 130 (jazz fusion)",
+    "type": "file"
+  },
+  {
+    "created": 1703284480.6779296,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/Beached+Whale+150.mp3",
+    "howl": null,
+    "name": "Beached Whale 150.mp3",
+    "title": "Beached Whale 150",
+    "type": "file"
+  },
+  {
+    "created": 1703284479.3261342,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+green+phoo+village+100.mp3",
+    "howl": null,
+    "name": "gaming - green phoo village 100.mp3",
+    "title": "gaming - green phoo village 100",
+    "type": "file"
+  },
+  {
+    "created": 1703284481.621585,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+blue+otherworld+120.mp3",
+    "howl": null,
+    "name": "gaming - blue otherworld 120.mp3",
+    "title": "gaming - blue otherworld 120",
+    "type": "file"
+  },
+  {
+    "created": 1703284481.124091,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/gaming+-+green+troll+144.mp3",
+    "howl": null,
+    "name": "gaming - green troll 144.mp3",
+    "title": "gaming - green troll 144",
+    "type": "file"
+  },
+  {
+    "created": 1703284483.1389358,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/symphony+orchestra+alpha+200.mp3",
+    "howl": null,
+    "name": "symphony orchestra alpha 200.mp3",
+    "title": "symphony orchestra alpha 200",
+    "type": "file"
+  },
+  {
+    "created": 1703284481.824074,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/Frenzy+and+Foil+155.mp3",
+    "howl": null,
+    "name": "Frenzy and Foil 155.mp3",
+    "title": "Frenzy and Foil 155",
+    "type": "file"
+  },
+  {
+    "created": 1703284482.6695235,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/IJKLM+100.mp3",
+    "howl": null,
+    "name": "IJKLM 100.mp3",
+    "title": "IJKLM 100",
+    "type": "file"
+  },
+  {
+    "created": 1703284483.4842286,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/notmalie+84.mp3",
+    "howl": null,
+    "name": "notmalie 84.mp3",
+    "title": "notmalie 84",
+    "type": "file"
+  },
+  {
+    "created": 1703284484.2465537,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/real+fast+drum+140.mp3",
+    "howl": null,
+    "name": "real fast drum 140.mp3",
+    "title": "real fast drum 140",
+    "type": "file"
+  },
+  {
+    "created": 1703284483.8275518,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/jam+session+2020_10_02.mp3",
+    "howl": null,
+    "name": "jam session 2020_10_02.mp3",
+    "title": "jam session 2020_10_02",
+    "type": "file"
+  },
+  {
+    "created": 1703284484.106615,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/LFO+bass+(deadmau5)+144.mp3",
+    "howl": null,
+    "name": "LFO bass (deadmau5) 144.mp3",
+    "title": "LFO bass (deadmau5) 144",
+    "type": "file"
+  },
+  {
+    "created": 1703284484.5830195,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/Chromatone+Kit.mp3",
+    "howl": null,
+    "name": "Chromatone Kit.mp3",
+    "title": "Chromatone Kit",
+    "type": "file"
+  },
+  {
+    "created": 1703284484.3973138,
+    "file": "https://2022assets.s3.amazonaws.com/music/audio/daw1loops/speedster+150.mp3",
+    "howl": null,
+    "name": "speedster 150.mp3",
+    "title": "speedster 150",
     "type": "file"
   }
 ]

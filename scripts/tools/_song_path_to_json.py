@@ -5,7 +5,7 @@ import errno
 import json
 import sys
 import datetime
-from _aws_list_s3_objects import to_s3_url
+from _aws_list_s3_objects import to_s3_url, compress
 
 # Expects songs to be stored as .../<keyword>/<name>
 # keywords: daw1, daw2, rec1, rec2, rec3
@@ -38,10 +38,17 @@ def path_to_dict(path):
         d['type'] = "directory"
         d['children'] = [path_to_dict(os.path.join(path, x)) for x in os.listdir(path)]
     else:
+        if path.endswith(".mp3"):
+            print(f"skipping {path}")
+        else:
+            ok, new_path = compress(path)
+            if not ok:
+                assert False, new_path
+            path = new_path
         d['type'] = "file"
         d['title'] = os.path.splitext(d['name'])[0]
-        d['file'] = '/' + '/'.join(names[-3:])
-        # d['file'] = to_s3_url(file=names[-1], prefix='/'.join(names[-3:-1]))
+        # d['file'] = '/' + '/'.join(names[-3:])
+        d['file'] = to_s3_url(file=names[-1], prefix='/'.join(names[-3:-1]))
         d['howl'] = None
         d['created'] = os.path.getctime(path)
     return d
@@ -74,10 +81,10 @@ if __name__ == '__main__':
         directory = sys.argv[1]
     except IndexError:
         # directory = "D:\\Download\\Touhou\\th-music-video-generator\\audio\\temp"
-        directory = "/Users/richard.liu/extra/music/audio"
+        directory = "/Users/richard.liu/extra/music-frontend/audio"
 
     # print(json.dumps(path_hierarchy(directory), indent=2, sort_keys=True, ensure_ascii=False))
-    path = "/Users/richard.liu/extra/music/audio/daw1piano/Coalescent 90.wav"
+    # path = "/Users/richard.liu/extra/music/audio/daw1piano/Coalescent 90.wav"
     # import pdb; pdb.set_trace()
     # d = path_to_dict(path)
     d = path_to_dict(directory)
