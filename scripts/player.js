@@ -358,8 +358,10 @@ Player.prototype = {
     // Update the display on the slider.
     var barWidth = (val * 90) / 100;
     barFull.style.width = (barWidth * 100) + '%';
-    // sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 25) + 'px';
-    sliderBtn.style.left = (barWidth * 100 - 2.5) + '%';
+    // sliderBtn.style.left = (barEmpty.clientWidth * val + barEmpty.offsetLeft - 25) + 'px';
+    sliderBtn.style.left = `calc(${5 + barWidth * 100}% - 25px)`;
+
+    // sliderBtn.style.left = (barWidth * 100) + '%';
   },
 
   /**
