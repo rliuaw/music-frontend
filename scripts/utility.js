@@ -65,3 +65,11 @@ window.mobilecheck = function () {
     })(navigator.userAgent || navigator.vendor || window.opera);
     return check;
 };
+
+function assertValueInRange(value) {
+    if (value >= 0 && value <= 1) {
+    //   console.log('The value is between 0 and 1');
+    } else {
+      throw new Error('The value is not between 0 and 1');
+    }
+  }

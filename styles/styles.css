@@ -476,6 +476,14 @@ input:checked + .slider:before {
     display: none;
 }
 
+#volumeInner {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 10%;
+}
+
 .bar {
     position: absolute;
     top: 50%;
@@ -502,7 +510,7 @@ input:checked + .slider:before {
     height: 50px;
     position: absolute;
     top: 50%;
-    left: 93.25%;
+    left: 87.5%;
     margin: -25px auto;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);

@@ -1,5 +1,5 @@
 // Cache references to DOM elements.
-var elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'settingBtn', 'playlistBtn', 'loopBtn', 'volumeBtn', 'progress', 'waveform', 'canvas', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
+var elms = ['track', 'timer', 'duration', 'created', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'settingBtn', 'playlistBtn', 'loopBtn', 'volumeBtn', 'progress', 'waveform', 'canvas', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
 elms.forEach(function (elm) {
   window[elm] = document.getElementById(elm);
 });
@@ -46,7 +46,9 @@ var Player = function (playlist) {
   }
 
   // Display the song title of the first track.
-  track.innerHTML = playlist[this.index].title;
+  this.updateTitle()
+  // track.innerHTML = playlist[this.index].title;
+  // created.innerHTML = playlist[this.index].created;
 
   var indexTemp = this.index - 1;
   while (this.playlist[indexTemp].file != null) {
@@ -229,6 +231,8 @@ Player.prototype = {
       while (self.playlist[indexTemp].file != null) {
         --indexTemp;
       }
+
+      // Update metadata
       document.getElementById('series').innerHTML = self.playlist[indexTemp].title;
     }
 
@@ -242,13 +246,13 @@ Player.prototype = {
     // new song active
     document.querySelector(`[song-index="${index}"]`).toggleAttribute("is-active", true);
 
-    // Play video
-    if (videoPlayer.stopped || isNewSong) {
-      mvInfo = data.info;
-      mvStage = 0;
-    } else if (videoPlayer.paused) {
-      videoPlayer.play();
-    }
+    // // Play video
+    // if (videoPlayer.stopped || isNewSong) {
+    //   mvInfo = data.info;
+    //   mvStage = 0;
+    // } else if (videoPlayer.paused) {
+    //   videoPlayer.play();
+    // }
 
     // Show the pause button.
     if (sound.state() === 'loaded') {
@@ -276,9 +280,9 @@ Player.prototype = {
     // Puase the sound.
     sound.pause();
 
-    if (videoPlayer.playing) {
-      videoPlayer.pause();
-    }
+    // if (videoPlayer.playing) {
+    //   videoPlayer.pause();
+    // }
 
     // Show the play button.
     playBtn.style.display = 'block';
@@ -345,6 +349,7 @@ Player.prototype = {
    * @param  {Number} val Volume between 0 and 1.
    */
   volume: function (val) {
+    assertValueInRange(val);
     var self = this;
 
     // Update the global volume (affecting all Howls).
@@ -353,7 +358,8 @@ Player.prototype = {
     // Update the display on the slider.
     var barWidth = (val * 90) / 100;
     barFull.style.width = (barWidth * 100) + '%';
-    sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 25) + 'px';
+    // sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 25) + 'px';
+    sliderBtn.style.left = (barWidth * 100 - 2.5) + '%';
   },
 
   /**
@@ -471,16 +477,23 @@ Player.prototype = {
     return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
   },
 
-  updateTitle: function(){
-    var data = this.playlist[this.index];
-    if (!window.lang || window.lang == 'jp') {
-      track.innerHTML = data.title;
-    }else{
-      getTranslatedSong(data.file, window.lang).then((song)=>{
-        if(!song) track.innerHTML = data.title;
-        else track.innerHTML =song;
-      })
-    }
+  updateTitle: function(index = this.index){
+    var data = this.playlist[index];
+    track.innerHTML = data.title;
+
+    let date = new Date(data.created * 1000);
+    let month = date.toLocaleString('default', { month: 'long' });
+    let year = date.getFullYear();
+    created.innerHTML = month + ' ' + year
+    const options = { 
+      day: 'numeric', 
+      month: 'long', 
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    };
+    const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
+    created.setAttribute('title', formattedDate);
   }
 };
 
@@ -522,7 +535,7 @@ window.addEventListener('resize', resize);
 var move = function (event) {
   if (window.sliderDown) {
     var x = event.clientX || event.touches[0].clientX;
-    var startX = window.innerWidth * 0.05;
+    var startX = barEmpty.getBoundingClientRect().left
     var layerX = x - startX;
     var per = Math.min(1, Math.max(0, layerX / parseFloat(barEmpty.scrollWidth)));
     player.volume(per);
