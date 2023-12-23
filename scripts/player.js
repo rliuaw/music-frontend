@@ -85,6 +85,7 @@ var Player = function (playlist) {
       jpSongTitles.push(song.title);
       a.className = 'pure-menu-link playlist-item';
       a.id = `${song.file}`
+      a.setAttribute('song-index', playlist.indexOf(song));
       a.onclick = function () {
         player.skipTo(playlist.indexOf(song));
       };
@@ -238,6 +239,9 @@ Player.prototype = {
     //track.innerHTML = (index + 1) + '. ' + data.title;
     this.updateTitle(index)
 
+    // new song active
+    document.querySelector(`[song-index="${index}"]`).toggleAttribute("is-active", true);
+
     // Play video
     if (videoPlayer.stopped || isNewSong) {
       mvInfo = data.info;
@@ -318,6 +322,10 @@ Player.prototype = {
    */
   skipTo: function (index) {
     var self = this;
+
+    // old song inactive
+    const oldSong = document.querySelector(`[song-index="${self.index}"]`)
+    oldSong && oldSong.toggleAttribute("is-active", false);
 
     // Stop the current track.
     if (self.playlist[self.index].howl) {

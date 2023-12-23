@@ -205,6 +205,7 @@ body {
     margin: -17.5px auto;
 }
 
+/* #a8d76a green */
 #loopBtn[is-active] {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iI2E4ZDc2YSIgZD0iTTEyIDhIOWE0IDQgMCAxIDAgMCA4aDZhNCA0IDAgMCAwIDIuMTA0LTcuNDAzbDEuNzctMS4xOC4wMi4wMThBNiA2IDAgMCAxIDE1IDE4SDlBNiA2IDAgMSAxIDkgNmgzVjRsNCAzLTQgM1Y4eiIvPjwvc3ZnPgo=');
 }
@@ -604,6 +605,30 @@ input:checked + .slider:before {
 
 .playlist-item:hover {
     color: #525252;
+}
+
+.playlist-item::before {
+    content: '';
+    display: none;
+    width: 8px;
+    height: 8px;
+    background-color: #525252;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.playlist-item:not(:hover)::before {
+    background-color: #a8d76a; /* Set the background color of the circle */
+}
+
+/* green */
+.playlist-item:not(:hover)[is-active] {
+    color: #a8d76a;
+    text-shadow: 0em 0em 1em rgba(255, 255, 255, 0.33);
+}
+
+.playlist-item[is-active]::before {
+    display: inline-block;
 }
 
 .playlist-title {
