@@ -96,8 +96,8 @@ var Player = function (playlist) {
     ul.appendChild(li);
   });
   pl.appendChild(ul);
-  gapi.client.setApiKey(googleAPI);
-  gapi.client.load('youtube', 'v3');
+  // gapi.client.setApiKey(googleAPI);
+  // gapi.client.load('youtube', 'v3');
   // For mobile user, display non-animated waveform as default
   if (mobilecheck()) {
     animatedWaveform.checked = '';
@@ -548,45 +548,46 @@ volume.addEventListener('touchmove', move);
 
 let gameObj;
 
-firebase.database().ref('games').once('value').then(function (games) {
-  gameObj = games.val();
-  gameObj.forEach(game => {
-    var songObj = {}
-    songObj['title'] = game.name;
-    songObj['file'] = null;
-    songObj['code'] = game.path.replace('/audio/', '').replace('.', '');
-    songList.push(songObj);
-    game.songs.forEach(song => {
-      var songObj = {}
-      songObj['title'] = song.name.split(".")[1];
-      if (songObj['title'] == ' U') {
-        songObj['title'] = ' U.N.オーエンは彼女なのか？'
-      }
-      songObj['file'] = song.path;
-      // songObj['file'] = "/audio/th01/2.永遠の巫女.mp3";
-      songObj['howl'] = null;
-      songObj['info'] = song;
-      if (song.chorus_start_time) {
-        songObj['chorusStartTime'] = song.chorus_start_time;
-      }
-      if (song.chorus_end_time) {
-        songObj['chorusEndTime'] = song.chorus_end_time;
-      }
-      songList.push(songObj);
-    });
+// firebase.database().ref('games').once('value').then(function (games) {
+//   gameObj = games.val();
+//   gameObj.forEach(game => {
+//     var songObj = {}
+//     songObj['title'] = game.name;
+//     songObj['file'] = null;
+//     songObj['code'] = game.path.replace('/audio/', '').replace('.', '');
+//     songList.push(songObj);
+//     game.songs.forEach(song => {
+//       var songObj = {}
+//       songObj['title'] = song.name.split(".")[1];
+//       if (songObj['title'] == ' U') {
+//         songObj['title'] = ' U.N.オーエンは彼女なのか？'
+//       }
+//       songObj['file'] = song.path;
+//       // songObj['file'] = "/audio/th01/2.永遠の巫女.mp3";
+//       songObj['howl'] = null;
+//       songObj['info'] = song;
+//       if (song.chorus_start_time) {
+//         songObj['chorusStartTime'] = song.chorus_start_time;
+//       }
+//       if (song.chorus_end_time) {
+//         songObj['chorusEndTime'] = song.chorus_end_time;
+//       }
+//       songList.push(songObj);
+//     });
+//   });
+// });
+
+fetch('/database/music.json')
+  .then(response => response.json())
+  .then(data => {
+    songList = data
+    // Setup our new audio player class and pass it the playlist.
+    player = new Player(songList);
+    resize();
+  })
+  .catch(error => {
+    console.log('Error:', error);
   });
-  fetch('/database/music.json')
-    .then(response => response.json())
-    .then(data => {
-      songList = data
-      // Setup our new audio player class and pass it the playlist.
-      player = new Player(songList);
-      resize();
-    })
-    .catch(error => {
-      console.log('Error:', error);
-    });
-});
 
 // Bind our player controls.
 playBtn.addEventListener('click', function () {
@@ -647,10 +648,10 @@ volume.addEventListener('touchend', function () {
   window.sliderDown = false;
 });
 
-// Image preloader
-for (var i = 6; i < 27; i++) {
-  imagePreload('./images/title/' + ('00' + i).slice(-2) + '.jpg');
-}
+// // Image preloader
+// for (var i = 6; i < 27; i++) {
+//   imagePreload('./images/title/' + ('00' + i).slice(-2) + '.jpg');
+// }
 
 // i18n loading
 function langChanged() {
