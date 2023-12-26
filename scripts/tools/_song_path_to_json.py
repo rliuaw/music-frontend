@@ -36,9 +36,11 @@ def path_to_dict(path):
     names = path.split('/')
     if os.path.isdir(path):
         d['type'] = "directory"
-        d['children'] = [path_to_dict(os.path.join(path, x)) for x in os.listdir(path)]
+        listdir = os.listdir(path)
+        listdir = list(filter(lambda x: not x.endswith('.csv'), listdir))
+        d['children'] = [path_to_dict(os.path.join(path, x)) for x in listdir]
     else:
-        if path.endswith(".mp3"):
+        if path.endswith(".mp3") and not path.endswith("/beat.mp3"):
             print(f"skipping {path}")
         else:
             ok, new_path = compress(path)
@@ -48,9 +50,9 @@ def path_to_dict(path):
         d['type'] = "file"
         d['title'] = os.path.splitext(d['name'])[0]
         d['file'] = '/' + '/'.join(names[-3:])
-        # d['file'] = to_s3_url(file=names[-1], prefix='/'.join(names[-3:-1]))
+        d['file'] = to_s3_url(file=names[-1], prefix='/'.join(names[-3:-1]))
         d['howl'] = None
-        d['created'] = os.path.getctime(path)
+        d['created'] = os.stat(path).st_birthtime
     return d
 
 
