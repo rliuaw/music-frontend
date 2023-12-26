@@ -4,3 +4,4 @@ images/temp/
 audio/*
 database/*
 __pycache__/
+.DS_Store
