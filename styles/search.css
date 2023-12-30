@@ -1,0 +1,74 @@
+#results {
+    max-height: 50vh;
+    max-width: 700px;
+    width: 100%;
+}
+
+#results > ul {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#results > ul > li {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+#searchInput {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #e6e6e6;
+    padding: 8px;
+    border: 0px;
+}
+
+#searchInputOuter {
+    margin: var(--borderWidth);
+    width: calc(100% - 2*var(--borderWidth));
+    max-width: calc(700px - 2*var(--borderWidth));
+    background-color: rgba(0, 0, 0, 0.65);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    --borderWidth: 4px;
+    /* border-image: linear-gradient(to right, #e6e6e6, #bb71f3); */
+    /* border-radius: var(--borderWidth); */
+}
+
+#searchInputOuter:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #e6e6e6, #bb71f3, #e6e6e6, #bb71f3);
+    /* border-radius: calc(2 * var(--borderWidth)); */
+    z-index: -1;
+    animation: animatedgradient 0.4s ease alternate 1;
+    background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+#searchInput:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

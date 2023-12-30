@@ -1,5 +1,5 @@
 // Cache references to DOM elements.
-var elms = ['track', 'timer', 'duration', 'created', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'settingBtn', 'playlistBtn', 'loopBtn', 'volumeBtn', 'progress', 'waveform', 'canvas', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
+var elms = ['track', 'timer', 'duration', 'created', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'settingBtn', 'playlistBtn', 'searchBtn', 'loopBtn', 'volumeBtn', 'progress', 'waveform', 'canvas', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn', 'search', 'searchInput', 'results'];
 elms.forEach(function (elm) {
   window[elm] = document.getElementById(elm);
 });
@@ -58,44 +58,12 @@ var Player = function (playlist) {
   // TODO remove dead code
   // changeImage(playlist[this.index].info);
 
-  var ul = null;
-  var ulth = 1;
   var pl = document.getElementById('playlist')
+  var results = document.getElementById('results')
   // Setup the playlist display.
-  playlist.forEach(function (song) {
-    var li = document.createElement('li');
-    li.className = 'pure-menu-item';
-    if (song.file == null) {
-      // Title
-      if (ul != null) {
-        pl.appendChild(ul);
-      }
-      li.innerHTML = song.title;
-      jpGameTitles.push(song.title);
-      li.id = song.code;
-      li.className += ' pure-menu-disabled playlist-title';
-      ul = document.createElement('ul');
-      ul.className = 'pure-menu-list';
-      if (ulth > 5) {
-        ul.style.backgroundImage = 'url(\'./images/title/' + ('00' + ulth).slice(-2) + '.jpg\')';
-      }
-      ulth++;
-    } else {
-      // Song
-      var a = document.createElement('div');
-      a.innerHTML = song.title;
-      jpSongTitles.push(song.title);
-      a.className = 'pure-menu-link playlist-item';
-      a.id = `${song.file}`
-      a.setAttribute('song-index', playlist.indexOf(song));
-      a.onclick = function () {
-        player.skipTo(playlist.indexOf(song));
-      };
-      li.appendChild(a);
-    }
-    ul.appendChild(li);
-  });
-  pl.appendChild(ul);
+  setupSongsDisplay(pl, playlist)
+  // Setup search results
+  setupSongsDisplay(results, playlist)
   // gapi.client.setApiKey(googleAPI);
   // gapi.client.load('youtube', 'v3');
   // For mobile user, display non-animated waveform as default
@@ -455,6 +423,23 @@ Player.prototype = {
   },
 
   /**
+   * Toggle the search display on/off.
+   */
+  toggleSearch: function (eventType) {
+    var self = this;
+    const shouldHide = (search.style.display === 'flex') || (eventType === 'document') || (eventType === 'escape');
+    search.style.display = shouldHide ? 'none' : 'flex';
+    searchBtn.style.pointerEvents =  shouldHide ? 'all' : 'none';
+
+    if (!shouldHide) searchInput.focus();
+
+    // setTimeout(function () {
+    //   search.style.display = display;
+    // }, (display === 'block') ? 0 : 500);
+    // search.className = (display === 'block') ? 'pure-menu fadein' : 'pure-menu fadeout';
+  },
+
+  /**
    * Toggle the setting display on/off.
    */
   toggleSetting: function () {
@@ -610,6 +595,34 @@ playlistBtn.addEventListener('click', function () {
 });
 playlist.addEventListener('click', function () {
   player.togglePlaylist();
+});
+searchBtn.addEventListener('click', function () {
+  player.toggleSearch('searchBtn');
+});
+searchInput.addEventListener('focus', function () {
+  console.log('focus');
+  search.style.display = 'none';
+  var height = search.offsetHeight; // Accessing offsetHeight triggers a reflow
+  search.style.display = 'flex';
+});
+searchInput.addEventListener('blur', function () {
+  console.log('blur');
+});
+document.addEventListener('click', function(event) {
+  if (event.target.closest('#search') || event.target.id === 'searchBtn') {
+    // If the "search" div or any of its children is clicked or searchBtn is clicked, do nothing
+  } else {
+      // If any other element is clicked
+    player.toggleSearch('document'); // Hides the input when it "loses focus"
+  }
+});
+document.addEventListener('keydown', function(event) {
+  if (event.key === "Escape") {
+    player.toggleSearch('escape'); // Hides the input when it "loses focus"
+  }
+});
+searchInput.addEventListener('input', function() {
+  filterSearchResults(searchInput, results);
 });
 loopBtn.addEventListener('click', function () {
   player.toggleLoop();

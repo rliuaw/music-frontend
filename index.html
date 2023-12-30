@@ -13,7 +13,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Touhou Project random music video generator/player, crawling image and video from websites to generate MV." />
     <meta name="msvalidate.01" content="3BDCFECA73036E90C8F629F8CC7075D7" />
-    <title>Touhou Music Video Generator</title>
+    <title>Music</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.4.3/plyr.css" integrity="sha256-rufXFXaVZSvt3zXMGOG17EoglendvXvURMiR5lX9O8g="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/search.css">
 </head>
 
 <body id="body">
@@ -71,6 +72,7 @@
             </div>
            
             <div class="btn" id="playlistBtn"></div>
+            <div class="btn" id="searchBtn"></div>
             <i class="btn fas fa-cog" id="settingBtn"></i>
             <div class="btn" id="volumeBtn"></div>
             <div class="btn" id="loopBtn"></div>
@@ -164,6 +166,15 @@
             <div id="sliderBtn"></div>
         </div>
         </div>
+
+        <!-- Search -->
+        <div class="pure-menu" id="search">
+            <div id="searchInputOuter">
+            <input type="text" placeholder="Search..." autocomplete="off" id="searchInput">
+            </div>
+            <div class="pure-menu pure-menu-scrollable" id="results">
+            </div>
+        </div>
     </div>
     <!-- Scripts -->
     <!-- <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script> -->
@@ -174,6 +185,7 @@
     <!-- <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady" defer></script> -->
     <script src="./scripts/vudio.js" defer></script>
     <script src="./scripts/utility.js" defer></script>
+    <script src="./scripts/search.js" defer></script>
     <script src="./scripts/player.js" defer></script>
     <!-- <script src="./scripts/video.js" defer></script> -->
     <script src="./scripts/i18n.js" defer></script>

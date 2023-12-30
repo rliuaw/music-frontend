@@ -7,6 +7,7 @@ html {
     outline: 0;
 }
 
+/* purple */
 body {
     width: 100%;
     height: 100%;
@@ -185,6 +186,16 @@ body {
     margin: -17.5px auto;
 }
 
+#searchBtn {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOXB4IiBoZWlnaHQ9IjlweCIgdmlld0JveD0iMCAwIDE1IDE1IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIj4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHNrZXRjaDp0eXBlPSJNU1BhZ2UiPgogICAgICAgIDxnIGlkPSJUb3AtQmFyIiBza2V0Y2g6dHlwZT0iTVNBcnRib2FyZEdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAzNi4wMDAwMDAsIC03MDEuMDAwMDAwKSIgZmlsbD0iI2ZmZiI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMDQ1LjQ4MzI1LDcxMS44ODU5NjEgTDIwNDguOTEyNDksNzE1LjMxNTIwNyBDMjA0OS4yOTg3Niw3MTUuNzAxNDc2IDIwNDkuOTIzMiw3MTUuNzAzMzAyIDIwNTAuMzEzMjUsNzE1LjMxMzI1MiBDMjA1MC43MDA2LDcxNC45MjU5MDMgMjA1MC42OTY4MSw3MTQuMjk0MDk2IDIwNTAuMzE1MjEsNzEzLjkxMjQ5MSBMMjA0Ni44ODU5Niw3MTAuNDgzMjQ2IEMyMDQ3LjU4NzMzLDcwOS41MDExOTIgMjA0OCw3MDguMjk4Nzg4IDIwNDgsNzA3IEMyMDQ4LDcwMy42ODYyOTIgMjA0NS4zMTM3MSw3MDEgMjA0Miw3MDEgQzIwMzguNjg2MjksNzAxIDIwMzYsNzAzLjY4NjI5MiAyMDM2LDcwNyBDMjAzNiw3MTAuMzEzNzA4IDIwMzguNjg2MjksNzEzIDIwNDIsNzEzIEMyMDQzLjI5ODc5LDcxMyAyMDQ0LjUwMTE5LDcxMi41ODczMzIgMjA0NS40ODMyNSw3MTEuODg1OTYxIEwyMDQ1LjQ4MzI1LDcxMS44ODU5NjEgWiBNMjAzOCw3MDcgQzIwMzgsNzA0Ljc5MDg2MSAyMDM5Ljc5MDg2LDcwMyAyMDQyLDcwMyBDMjA0NC4yMDkxNCw3MDMgMjA0Niw3MDQuNzkwODYxIDIwNDYsNzA3IEMyMDQ2LDcwOS4yMDkxMzkgMjA0NC4yMDkxNCw3MTEgMjA0Miw3MTEgQzIwMzkuNzkwODYsNzExIDIwMzgsNzA5LjIwOTEzOSAyMDM4LDcwNyBaIiBpZD0iU2VhcmNoIiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=');
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: 79px;
+    margin: -11px auto;
+}
+
 #volumeBtn {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTQgOWg0LjAwMkwxMiA1djE0Yy0yLjQ0Ni0yLjY2Ny0zLjc3OC00LTMuOTk4LTRINFY5em0xMCA0YTEgMSAwIDAgMCAwLTJWOWEzIDMgMCAwIDEgMCA2di0yem0wIDRhNSA1IDAgMCAwIDAtMTBWNWE3IDcgMCAwIDEgMCAxNHYtMnoiLz48L3N2Zz4K');
     background-size: cover;
@@ -342,6 +353,11 @@ input:checked + .slider:before {
         line-height: 16px;
         height: 16px;
         font-size: 16px;
+    }
+
+    #searchBtn {
+        left: 28px;
+        top: -14px;
     }
 
     #setting {
