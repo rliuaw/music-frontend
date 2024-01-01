@@ -98,6 +98,8 @@ def backfill_metadata(d):
                 assert len(matches) >= 1, f"{gk} {matches}"
                 gk = min(matches, key=len)
             assert gk in metadata[mk], f"{mk} {gk}"
+            if mk == 'daw1glitch':
+                print(g)
             g['created'] = metadata[mk][gk]
     return d
 
