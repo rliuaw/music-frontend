@@ -600,13 +600,13 @@ searchBtn.addEventListener('click', function () {
   player.toggleSearch('searchBtn');
 });
 searchInput.addEventListener('focus', function () {
-  console.log('focus');
+  // console.log('focus');
   search.style.display = 'none';
   var height = search.offsetHeight; // Accessing offsetHeight triggers a reflow
   search.style.display = 'flex';
 });
 searchInput.addEventListener('blur', function () {
-  console.log('blur');
+  // console.log('blur');
 });
 document.addEventListener('click', function(event) {
   if (

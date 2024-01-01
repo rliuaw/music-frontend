@@ -84,12 +84,19 @@ body {
     font-size: 18px;
 }
 
+#track {
+    user-select: text;
+    cursor: default;
+}
+
 #timer {
     position: absolute;
     top: 0;
     left: 3%;
     text-align: left;
     font-size: 26px;
+    user-select: text;
+    cursor: default;
 }
 
 #duration {
@@ -99,10 +106,22 @@ body {
     text-align: right;
     font-size: 26px;
     opacity: 0.5;
+    user-select: text;
+    cursor: default;
 }
 
 #pid {
     cursor: pointer;
+}
+
+#series {
+    user-select: text;
+    cursor: default;
+}
+
+#created {
+    user-select: text;
+    cursor: default;
 }
 
 /* Controls */
@@ -625,6 +644,7 @@ input:checked + .slider:before {
 .playlist-item {
     color: #e6e6e6;
     cursor: pointer;
+    user-select: text;
 }
 
 .playlist-item:hover {

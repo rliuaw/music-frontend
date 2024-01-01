@@ -12,6 +12,8 @@
 
 #results > ul > li {
     background-color: rgba(0, 0, 0, 0.65);
+    user-select: text;
+    cursor: default;
 }
 
 #searchInput {
