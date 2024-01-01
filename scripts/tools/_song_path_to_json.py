@@ -5,8 +5,11 @@ import errno
 import json
 import sys
 import datetime
+from _load_metadata_csv import get_checker
 from _aws_list_s3_objects import to_s3_url, compress
 
+
+metadata = dict()
 # Expects songs to be stored as .../<keyword>/<name>
 # keywords: daw1, daw2, rec1, rec2, rec3
 def path_hierarchy(path):
@@ -37,21 +40,28 @@ def path_to_dict(path):
     if os.path.isdir(path):
         d['type'] = "directory"
         listdir = os.listdir(path)
-        listdir = list(filter(lambda x: not x.endswith('.csv'), listdir))
-        d['children'] = [path_to_dict(os.path.join(path, x)) for x in listdir]
+        dd = [path_to_dict(os.path.join(path, x)) for x in listdir]
+        d['children'] = [x for x in dd if x is not None]
     else:
-        if path.endswith(".mp3") and not path.endswith("/beat.mp3"):
-            print(f"skipping {path}")
+        if path.endswith(".csv"):
+            print(f"loading {path}")
+            load_csv(path)
+            return None
+        elif path.endswith(".mp3"):
+            print(f"mp3: {path}")
         else:
-            ok, new_path = compress(path)
-            if not ok:
-                assert False, new_path
-            path = new_path
+            print(f"skipping {path}")
+            return None
+            # ok, new_path = compress(path)
+            # if not ok:
+            #     assert False, new_path
+            # path = new_path
         d['type'] = "file"
         d['title'] = os.path.splitext(d['name'])[0]
         d['file'] = '/' + '/'.join(names[-3:])
-        d['file'] = to_s3_url(file=names[-1], prefix='/'.join(names[-3:-1]))
+        # d['file'] = to_s3_url(file=names[-1], prefix='/'.join(names[-3:-1]))
         d['howl'] = None
+        # print(path)
         d['created'] = os.stat(path).st_birthtime
     return d
 
@@ -65,7 +75,6 @@ def dir_as_songlist(d):
     t['file'] = None
     res.append(t)
     for c in d['children']:
-    # for c in d['children'][:5]:
         res.append(c)
     return res
 
@@ -76,6 +85,43 @@ def dir_dir_as_songlist(d):
     for c in d['children']:
         res += dir_as_songlist(c)
     return res
+
+
+def backfill_metadata(d):
+    for c in d['children']:
+        mk = c['name']
+        assert mk in metadata, f"{mk}"
+        for g in c['children']:
+            gk = g['name']
+            if gk not in metadata[mk]:
+                matches = [k for k in metadata[mk].keys() if k.startswith(gk.split(".mp3")[0])]
+                assert len(matches) >= 1, f"{gk} {matches}"
+                gk = min(matches, key=len)
+            assert gk in metadata[mk], f"{mk} {gk}"
+            g['created'] = metadata[mk][gk]
+    return d
+
+
+def load_csv(path):
+    checker = None
+    d = dict()
+    with open(path, 'r') as f:
+        m = f.read()
+        m = m.split('\n')
+        for k in m:
+            if len(k) == 0:
+                continue
+            if checker is None:
+                checker = get_checker(k)
+                if checker is None:
+                    print(f"no checker for {k}, skipping")
+                    continue
+            assert checker.check_date_format(k), f"{path} {k} {checker.format} {checker.dateIx}"
+            name, created = checker.convert(k)
+            d[name] = created
+    path = path.split('/')[-1].split('.')[0]
+    global metadata
+    metadata[path] = d
 
 
 if __name__ == '__main__':
@@ -90,6 +136,7 @@ if __name__ == '__main__':
     # import pdb; pdb.set_trace()
     # d = path_to_dict(path)
     d = path_to_dict(directory)
+    d = backfill_metadata(d)
     d = dir_dir_as_songlist(d)
     d = json.dumps(d, indent=2, sort_keys=True)
     with open("database/music.json", "w") as f:

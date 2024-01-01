@@ -20,6 +20,7 @@ def compress(path):
     except FileNotFoundError:
         return False, f"{new_path} not found"
 
+    print(path)
     print(f"orig {size} new {new_size} = {(size - new_size)/size:.2%} redux")
     if not path.endswith(".mp3"): # mp3 input is overwritten anyways
         payload = f'''rm "{path}"'''
