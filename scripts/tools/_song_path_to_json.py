@@ -44,11 +44,12 @@ def path_to_dict(path):
         d['children'] = [x for x in dd if x is not None]
     else:
         if path.endswith(".csv"):
-            print(f"loading {path}")
+            # print(f"loading {path}")
             load_csv(path)
             return None
         elif path.endswith(".mp3"):
-            print(f"mp3: {path}")
+            # print(f"mp3: {path}")
+            pass
         else:
             print(f"skipping {path}")
             return None
@@ -59,7 +60,7 @@ def path_to_dict(path):
         d['type'] = "file"
         d['title'] = os.path.splitext(d['name'])[0]
         d['file'] = '/' + '/'.join(names[-3:])
-        # d['file'] = to_s3_url(file=names[-1], prefix='/'.join(names[-3:-1]))
+        d['file'] = to_s3_url(file=names[-1], prefix='/'.join(names[-3:-1]))
         d['howl'] = None
         # print(path)
         d['created'] = os.stat(path).st_birthtime
@@ -98,8 +99,6 @@ def backfill_metadata(d):
                 assert len(matches) >= 1, f"{gk} {matches}"
                 gk = min(matches, key=len)
             assert gk in metadata[mk], f"{mk} {gk}"
-            if mk == 'daw1glitch':
-                print(g)
             g['created'] = metadata[mk][gk]
     return d
 
@@ -116,6 +115,8 @@ def load_csv(path):
             if checker is None:
                 checker = get_checker(k)
                 if checker is None:
+                    if k == '"Name","CreationTime"':
+                        continue
                     print(f"no checker for {k}, skipping")
                     continue
             assert checker.check_date_format(k), f"{path} {k} {checker.format} {checker.dateIx}"
