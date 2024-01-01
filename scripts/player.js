@@ -609,8 +609,12 @@ searchInput.addEventListener('blur', function () {
   console.log('blur');
 });
 document.addEventListener('click', function(event) {
-  if (event.target.closest('#search') || event.target.id === 'searchBtn') {
-    // If the "search" div or any of its children is clicked or searchBtn is clicked, do nothing
+  if (
+    event.target.closest('#searchInputOuter') ||
+    event.target.closest('#results') ||
+    event.target.id === 'searchBtn'
+  ) {
+    // If the "search" divs or any of their children is clicked or searchBtn is clicked, do nothing
   } else {
       // If any other element is clicked
     player.toggleSearch('document'); // Hides the input when it "loses focus"
